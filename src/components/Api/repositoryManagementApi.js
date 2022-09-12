@@ -1,6 +1,6 @@
 const baseUrl = "http://localhost:3001";
 
-const token = localStorage.getItem("userDetails");
+const token = localStorage.getItem("userToken");
 
 export const repositoryManagementApi = {
   getAllRepo: async () => {
@@ -74,7 +74,7 @@ export const repositoryManagementApi = {
     });
     const data = await response.json();
 
-    localStorage.setItem("userDetails", data.token);
+    localStorage.setItem("userToken", data.token);
   },
 
   createUser: async (userBody) => {
