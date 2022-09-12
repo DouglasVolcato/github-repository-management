@@ -6,6 +6,7 @@ export default function EditPage(props) {
   const [newNote, setNewNote] = useState();
 
   async function updateNote(event) {
+    event.preventDefault()
     setNewNote({ ...newNote });
     repositoryManagementApi.editRepo(props.data.name, newNote);
   }
