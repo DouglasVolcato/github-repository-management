@@ -1,15 +1,13 @@
 import { useState } from "react";
 import { repositoryManagementApi } from "../Api/repositoryManagementApi";
 
-export default function Login() {
+export default function Login(props) {
   const [loginUser, setLoginUser] = useState();
 
   async function logUser(event) {
-    event.preventDefault();
-
     setLoginUser({ ...loginUser });
-
     repositoryManagementApi.login(loginUser);
+    props.newLogin();
   }
 
   return (

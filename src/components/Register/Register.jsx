@@ -5,10 +5,7 @@ export default function Register() {
   const [registerUser, setRegisterUser] = useState();
 
   async function addNewUser(event) {
-    event.preventDefault();
-
     setRegisterUser({ ...registerUser });
-
     repositoryManagementApi.createUser(registerUser);
   }
 
