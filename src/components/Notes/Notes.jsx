@@ -14,8 +14,8 @@ export default function Notes() {
 
   return (
     <div className="Notes" onChange={getNotes}>
-      {notes.map((data) => (
-        <Note data={data} />
+      {notes.map((data, index) => (
+        <Note data={data} key={index}/>
       ))}
     </div>
   );
