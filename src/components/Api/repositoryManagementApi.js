@@ -14,7 +14,6 @@ export const repositoryManagementApi = {
       }),
     });
     const data = await response.json();
-
     return data;
   },
 
@@ -31,13 +30,10 @@ export const repositoryManagementApi = {
       }
     );
     const data = await response.json();
-
     return data;
   },
 
   editRepo: async (repoName, repoBody) => {
-    console.log(JSON.stringify(repoBody));
-
     const response = await fetch(
       baseUrl + "/repo/update-repository/" + repoName,
       {
@@ -51,9 +47,20 @@ export const repositoryManagementApi = {
       }
     );
     const data = await response.json();
+    return data;
+  },
 
-    console.log(data);
-
+  addRepo: async (repoBody) => {
+    const response = await fetch(baseUrl + "/repo/create-repository/", {
+      method: "POST",
+      headers: new Headers({
+        Authorization: "Bearer " + token,
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      }),
+      body: JSON.stringify({ ...repoBody }),
+    });
+    const data = await response.json();
     return data;
   },
 };
