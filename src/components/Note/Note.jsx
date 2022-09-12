@@ -18,7 +18,7 @@ export default function Note(props) {
       <p>Name: {props.data.name}</p>
       <p>Priority: {props.data.priority}</p>
       <p>Note: {props.data.note}</p>
-      <a href={"//" + props.data.link} target="_blank" rel="noreferrer">
+      <a href={props.data.link} target="_blank" rel="noreferrer">
         <button>Access</button>
       </a>
       <button onClick={() => {deleteNote(props.data.name)}}>Delete</button>
