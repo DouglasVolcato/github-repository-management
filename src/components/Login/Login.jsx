@@ -26,7 +26,7 @@ export default function Login() {
         <br />
         Password:
         <input
-          type="text"
+          type="password"
           name="password"
           onChange={(event) => {
             setLoginUser({ ...loginUser, password: event.target.value });

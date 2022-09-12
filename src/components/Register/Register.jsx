@@ -35,7 +35,7 @@ export default function Register() {
         <br />
         Password:
         <input
-          type="text"
+          type="password"
           name="password"
           onChange={(event) => {
             setRegisterUser({ ...registerUser, password: event.target.value });
