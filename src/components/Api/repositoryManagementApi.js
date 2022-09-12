@@ -51,7 +51,7 @@ export const repositoryManagementApi = {
   },
 
   addRepo: async (repoBody) => {
-    const response = await fetch(baseUrl + "/repo/create-repository/", {
+    const response = await fetch(baseUrl + "/repo/create-repository", {
       method: "POST",
       headers: new Headers({
         Authorization: "Bearer " + token,
@@ -59,6 +59,32 @@ export const repositoryManagementApi = {
         "Content-Type": "application/json",
       }),
       body: JSON.stringify({ ...repoBody }),
+    });
+    const data = await response.json();
+    return data;
+  },
+
+  login: async (body) => {
+    const response = await fetch(baseUrl + "/auth/login", {
+      method: "POST",
+      headers: new Headers({
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      }),
+      body: JSON.stringify({ ...body }),
+    });
+    const data = await response.json();
+    return data;
+  },
+
+  createUser: async (userBody) => {
+    const response = await fetch(baseUrl + "/user/create-user", {
+      method: "POST",
+      headers: new Headers({
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      }),
+      body: JSON.stringify({ ...userBody }),
     });
     const data = await response.json();
     return data;
