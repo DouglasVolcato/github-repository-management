@@ -1,0 +1,22 @@
+.Header{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: green;
+    color: white;
+    padding: 1vh;
+    position:fixed;
+    top: 0;
+}
+.Header__navbar{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100vw;
+}
+.Header__navbar div{
+    text-align: center;
+    width: 8vw;
+    cursor: pointer;
+}
+.Header__navbar div:hover{
+    background-color: blue;
+}
