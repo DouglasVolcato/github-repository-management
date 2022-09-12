@@ -15,23 +15,23 @@ export default function Login() {
   return (
     <div className="Login">
       <form onSubmit={logUser}>
-        Email:{" "}
+        Email:
         <input
           type="text"
           name="email"
           onChange={(event) => {
             setLoginUser({ ...loginUser, email: event.target.value });
           }}
-        />{" "}
+        />
         <br />
-        Password:{" "}
+        Password:
         <input
           type="text"
           name="password"
           onChange={(event) => {
             setLoginUser({ ...loginUser, password: event.target.value });
           }}
-        />{" "}
+        />
         <br />
         <button type="submit">Login</button>
       </form>
