@@ -7,7 +7,6 @@ export default function Login(props) {
   async function logUser(event) {
     setLoginUser({ ...loginUser });
     repositoryManagementApi.login(loginUser);
-    props.newLogin();
   }
 
   return (
