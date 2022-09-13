@@ -5,8 +5,17 @@ export default function Register() {
   const [registerUser, setRegisterUser] = useState();
 
   async function addNewUser(event) {
+    event.preventDefault();
     setRegisterUser({ ...registerUser });
-    repositoryManagementApi.createUser(registerUser);
+    const apiAnswer = await repositoryManagementApi.createUser(registerUser);
+
+    try {
+      if (apiAnswer.message.includes("Email already exists in database")) {
+        alert("Email already registrated.");
+      }
+    } catch (err) {
+      alert("Successfully registered!");
+    }
   }
 
   return (
@@ -16,6 +25,7 @@ export default function Register() {
         <input
           type="text"
           name="name"
+          required={true}
           onChange={(event) => {
             setRegisterUser({ ...registerUser, name: event.target.value });
           }}
@@ -23,8 +33,9 @@ export default function Register() {
         <br />
         Email:
         <input
-          type="text"
+          type="email"
           name="email"
+          required={true}
           onChange={(event) => {
             setRegisterUser({ ...registerUser, email: event.target.value });
           }}
@@ -34,6 +45,7 @@ export default function Register() {
         <input
           type="password"
           name="password"
+          required={true}
           onChange={(event) => {
             setRegisterUser({ ...registerUser, password: event.target.value });
           }}
