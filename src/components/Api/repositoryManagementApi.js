@@ -73,8 +73,8 @@ export const repositoryManagementApi = {
       body: JSON.stringify({ ...body }),
     });
     const data = await response.json();
-
     localStorage.setItem("userToken", data.token);
+    return data;
   },
 
   createUser: async (userBody) => {
