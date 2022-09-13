@@ -1,18 +1,17 @@
 const baseUrl = "http://localhost:3001";
 
-const token = localStorage.getItem("userToken");
-
 export const repositoryManagementApi = {
   getAllRepo: async () => {
     const response = await fetch(baseUrl + "/repo/get-all-repository", {
       method: "GET",
       headers: new Headers({
-        Authorization: "Bearer " + token,
+        Authorization: "Bearer " + localStorage.getItem("userToken"),
         Accept: "application/json",
         "Content-Type": "application/json",
       }),
     });
     const data = await response.json();
+    console.log(data);
     return data;
   },
 
@@ -22,7 +21,7 @@ export const repositoryManagementApi = {
       {
         method: "DELETE",
         headers: new Headers({
-          Authorization: "Bearer " + token,
+          Authorization: "Bearer " + localStorage.getItem("userToken"),
           Accept: "application/json",
           "Content-Type": "application/json",
         }),
@@ -38,7 +37,7 @@ export const repositoryManagementApi = {
       {
         method: "PUT",
         headers: new Headers({
-          Authorization: "Bearer " + token,
+          Authorization: "Bearer " + localStorage.getItem("userToken"),
           Accept: "application/json",
           "Content-Type": "application/json",
         }),
@@ -53,7 +52,7 @@ export const repositoryManagementApi = {
     const response = await fetch(baseUrl + "/repo/create-repository", {
       method: "POST",
       headers: new Headers({
-        Authorization: "Bearer " + token,
+        Authorization: "Bearer " + localStorage.getItem("userToken"),
         Accept: "application/json",
         "Content-Type": "application/json",
       }),
@@ -73,6 +72,7 @@ export const repositoryManagementApi = {
       body: JSON.stringify({ ...body }),
     });
     const data = await response.json();
+    localStorage.removeItem("userToken");
     localStorage.setItem("userToken", data.token);
     return data;
   },
