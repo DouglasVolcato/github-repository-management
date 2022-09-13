@@ -6,7 +6,9 @@ export default function Note(props) {
   const [editModal, setEditModal] = useState(false);
 
   async function deleteNote(repoName) {
-    repositoryManagementApi.deleteRepo(repoName);
+    if (window.confirm("Are you sure to delete this note?")) {
+      repositoryManagementApi.deleteRepo(repoName);
+    }
   }
 
   function showEditModal() {
@@ -21,11 +23,21 @@ export default function Note(props) {
       <a href={props.data.link} target="_blank" rel="noreferrer">
         <button>Access</button>
       </a>
-      <button onClick={() => {deleteNote(props.data.name)}}>Delete</button>
+      <button
+        onClick={() => {
+          deleteNote(props.data.name);
+        }}
+      >
+        Delete
+      </button>
 
       <button onClick={() => showEditModal()}>Edit</button>
 
-      {editModal === true ? <EditPage data={props.data} showEditModal={showEditModal}/> : <></>}
+      {editModal === true ? (
+        <EditPage data={props.data} showEditModal={showEditModal} />
+      ) : (
+        <></>
+      )}
     </div>
   );
 }
