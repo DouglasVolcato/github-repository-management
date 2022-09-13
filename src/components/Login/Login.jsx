@@ -5,8 +5,19 @@ export default function Login(props) {
   const [loginUser, setLoginUser] = useState();
 
   async function logUser(event) {
+    event.preventDefault();
     setLoginUser({ ...loginUser });
-    repositoryManagementApi.login(loginUser);
+    const apiAnswer = await repositoryManagementApi.login(loginUser);
+
+    try {
+      if (apiAnswer.message.includes("Wrong password.")) {
+        alert("Wrong password.");
+      } else if (apiAnswer.message.includes("Email not found.")) {
+        alert("Email not registered.");
+      }
+    } catch (err) {
+      alert("Successfully logged in!");
+    }
   }
 
   return (
@@ -14,8 +25,9 @@ export default function Login(props) {
       <form onSubmit={logUser}>
         Email:
         <input
-          type="text"
+          type="email"
           name="email"
+          required={true}
           onChange={(event) => {
             setLoginUser({ ...loginUser, email: event.target.value });
           }}
@@ -25,6 +37,7 @@ export default function Login(props) {
         <input
           type="password"
           name="password"
+          required={true}
           onChange={(event) => {
             setLoginUser({ ...loginUser, password: event.target.value });
           }}
