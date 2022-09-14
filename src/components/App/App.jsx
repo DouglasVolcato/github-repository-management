@@ -8,8 +8,8 @@ export default function App() {
 
   return (
     <div className="App">
-      <Header setPage={setPage}/>
-      <Body page={page}/>
+      <Header setPage={setPage} />
+      <Body page={page} />
       <Footer />
     </div>
   );
