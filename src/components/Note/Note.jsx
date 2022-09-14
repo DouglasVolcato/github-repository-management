@@ -34,7 +34,7 @@ export default function Note(props) {
       <button onClick={() => showEditModal()}>Edit</button>
 
       {editModal === true ? (
-        <EditPage data={props.data} showEditModal={showEditModal} />
+        <EditPage data={props.data} showEditModal={showEditModal} reloadPage={props.reloadPage}/>
       ) : (
         <></>
       )}

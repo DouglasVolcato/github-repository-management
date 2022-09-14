@@ -9,6 +9,8 @@ export default function EditPage(props) {
     event.preventDefault();
     setNewNote({ ...newNote });
     repositoryManagementApi.editRepo(props.data.name, newNote);
+    props.reloadPage()
+    props.showEditModal()
   }
 
   return (
