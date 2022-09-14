@@ -10,7 +10,6 @@ export default function Notes() {
   function reloadPage() {
     setReload(reload + 1);
   }
-
   async function getNotes() {
     const data = await repositoryManagementApi.getAllRepo();
     setNotes([...data]);
