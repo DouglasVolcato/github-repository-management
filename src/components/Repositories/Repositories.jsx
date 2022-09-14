@@ -36,8 +36,8 @@ export default function Repositories() {
       {repositories === [] ? (
         <p>Loading...</p>
       ) : (
-        repositories.map((repo) => (
-          <Repository repo={repo} repoName={repoName} />
+        repositories.map((repo, key) => (
+          <Repository repo={repo} repoName={repoName} key={key} />
         ))
       )}
     </div>
