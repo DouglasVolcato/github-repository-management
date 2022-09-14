@@ -1,0 +1,55 @@
+.Repository{
+    border: solid 0.1vw black;
+    padding: 1vw;
+    width: 25vw;
+    margin: 1vw;
+    border: solid 0.2vw darkgoldenrod;
+    background-color: rgb(201, 174, 108);
+    border-radius: 2%;
+}
+.Repository__name{
+    width: fit-content;
+    margin: 1vw auto 1vw auto;
+    font-size: 2vw;
+    background-color: rgb(201, 174, 108);
+    font-weight: bold;
+}
+.Repository__buttons{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(201, 174, 108);
+}
+.Repository__accessButton2{
+    cursor: pointer;
+    font-weight: bold;
+    height: 100%;
+    width: 100%;
+    font-size: 1.2vw;
+    padding: 0.2vw;
+    background-color: darkgreen;
+    color: aliceblue;
+}
+.Repository__accessButton{
+    cursor: pointer;
+    font-weight: bold;
+    height: 100%;
+    width: 35%;
+    font-size: 1.2vw;
+    background-color: darkgreen;
+    color: aliceblue;
+}
+.Repository__addButton{
+    cursor: pointer;
+    font-weight: bold;
+    width: 35%;
+    font-size: 1.2vw;
+    padding: 0.2vw;
+    background-color: darkgreen;
+    color: aliceblue;
+}
+.Repository__accessButton2:hover{
+    background-color: rgb(0, 0, 255);
+}
+.Repository__addButton:hover{
+    background-color: rgb(139, 0, 238);
+}

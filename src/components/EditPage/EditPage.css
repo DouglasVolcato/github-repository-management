@@ -6,9 +6,36 @@
     width: 100vw;
     display: flex;
     background-color: rgba(255, 255, 255, 0.836);
+    font-size: 1.8vw;
 }
-.EditPage_form{
+.EditPage__form{
     width: 50%;
     margin: auto;
     border: solid 2px black;
+    padding: 0.5vw;
+    background-color: rgb(216, 214, 106);
+}
+.EditPage__form--input{
+    font-size: 1.5vw;
+    margin: 0.5vw;
+    background-color: rgb(216, 214, 106);
+}
+.EditPage__form--buttons{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0.5vw;
+    background-color: rgb(216, 214, 106);
+}
+.EditPage__form--submitButton, .EditPage__form--closeButton{
+    background-color: rgb(80, 218, 0);
+    color: rgb(0, 0, 0);
+    font-size: 1.5vw;
+    width: 30%;
+    margin: 0.5vw;
+    font-weight: bold;
+}
+
+.EditPage__form--submitButton:hover, .EditPage__form--closeButton:hover{
+    background-color: blue;
+    color: white;
 }

@@ -1,0 +1,30 @@
+.Login{
+    padding: 1vw;
+    height: 100%;
+}
+.Login__h1{
+    width: fit-content;
+    margin: 2vw auto 2vw auto;
+    font-size: 3vw;
+}
+.Login__form{
+    width: fit-content;
+    margin: auto;
+}
+.Login__form--input{
+    font-size: 1.8vw;
+    border-radius: 5%;
+}
+.Login__form--button{
+    font-size: 2vw;
+    width: 100%;
+    background-color: rgb(216, 168, 45);
+    border: solid 0.2vw rgb(0, 0, 0);
+    border-radius: 5%;
+    font-weight: bold;
+    cursor: pointer;
+}
+.Login__form--button:hover{
+    background-color: blue;
+    color: white;
+}

@@ -3,20 +3,28 @@
     justify-content: space-evenly;
     background-color: green;
     color: white;
-    padding: 1vh;
+    padding: 0.5vw;
     position:fixed;
     top: 0;
+    font-size: 2vw;
 }
 .Header__navbar{
     display: flex;
     justify-content: space-evenly;
     width: 100vw;
+    background-color: green;
 }
 .Header__navbar div{
+    border-radius: 3%;
     text-align: center;
-    width: 8vw;
+    width: 17vw;
     cursor: pointer;
+    background-color: green;
+    border: solid 0.5vw green;
+    font-weight: bold;
 }
 .Header__navbar div:hover{
-    background-color: blue;
+    border-color: yellow;
+    background-color: yellow;
+    color: blue;
 }

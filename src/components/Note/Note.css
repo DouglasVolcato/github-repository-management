@@ -1,0 +1,44 @@
+.Note{
+    width: fit-content;
+    margin: auto;
+    width: 25vw;
+    border: solid 0.3vw rgb(200, 223, 0);
+    background-color: rgb(172, 185, 110);
+    margin: 1.5vw;
+    padding: 0.5vw;
+    font-size: 1.6vw;
+}
+.Note__name, .Note__priority, .Note__note{
+    margin: 0.5vw;
+    background-color: rgb(172, 185, 110);
+}
+.Note__buttons{
+    background-color: rgb(172, 185, 110);
+    display: flex;
+    justify-content: space-evenly;
+}
+.Note__accessButton, .Note__deleteButton, .Note__editButton{
+    font-size: 1.2vw;
+    width: 6vw;
+    padding: 0.3vw;
+    background-color: rgb(216, 168, 45);
+    border: solid 0.1vw rgb(0, 0, 0);
+    border-radius: 5%;
+    cursor: pointer;
+    font-weight: bold;
+}
+.Note__a{
+    background-color: rgb(172, 185, 110);
+}
+.Note__accessButton:hover{
+    background-color: blue;
+    color: white;
+}
+.Note__deleteButton:hover{
+    background-color: rgb(223, 0, 0);
+    color: white;
+}
+.Note__editButton:hover{
+    background-color: rgb(71, 209, 16);
+    color: rgb(0, 0, 0);
+}
