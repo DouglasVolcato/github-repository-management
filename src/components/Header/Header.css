@@ -3,7 +3,7 @@
     justify-content: space-evenly;
     background-color: green;
     color: white;
-    padding: 0.5vw;
+    padding: 5px;
     position: fixed;
     top: 0;
     font-size: 2vw;
@@ -19,10 +19,10 @@
 .Header__navbar div {
     border-radius: 3%;
     text-align: center;
-    width: 17vw;
+    width: fit-content;
     cursor: pointer;
     background-color: green;
-    border: solid 0.5vw green;
+    border: solid 2px green;
     font-weight: bold;
 }
 
@@ -32,121 +32,13 @@
     color: blue;
 }
 
-@media(max-width: 1139px) {
+@media(max-width: 1009px) {
     .Header {
         display: flex;
         justify-content: space-evenly;
         background-color: green;
         color: white;
-        padding: 0.5vw;
-        position: fixed;
-        top: 0;
-        font-size: 2vw;
-    }
-
-    .Header__navbar {
-        display: flex;
-        justify-content: space-evenly;
-        width: 100vw;
-        background-color: green;
-    }
-
-    .Header__navbar div {
-        border-radius: 3%;
-        text-align: center;
-        width: 17vw;
-        cursor: pointer;
-        background-color: green;
-        border: solid 0.5vw green;
-        font-weight: bold;
-    }
-
-    .Header__navbar div:hover {
-        border-color: yellow;
-        background-color: yellow;
-        color: blue;
-    }
-}
-
-@media(max-width: 959px) {
-    .Header {
-        display: flex;
-        justify-content: space-evenly;
-        background-color: green;
-        color: white;
-        padding: 1vw;
-        position: fixed;
-        top: 0;
-        font-size: 2.5vw;
-    }
-
-    .Header__navbar {
-        display: flex;
-        justify-content: space-evenly;
-        width: 100.5vw;
-        background-color: green;
-    }
-
-    .Header__navbar div {
-        border-radius: 3%;
-        text-align: center;
-        width: 17.5vw;
-        cursor: pointer;
-        background-color: green;
-        border: solid 1vw green;
-        font-weight: bold;
-    }
-
-    .Header__navbar div:hover {
-        border-color: yellow;
-        background-color: yellow;
-        color: blue;
-    }
-}
-
-@media(max-width: 779px) {
-    .Header {
-        display: flex;
-        justify-content: space-evenly;
-        background-color: green;
-        color: white;
-        padding: 1.5vw;
-        position: fixed;
-        top: 0;
-        font-size: 3vw;
-    }
-
-    .Header__navbar {
-        display: flex;
-        justify-content: space-evenly;
-        width: 101vw;
-        background-color: green;
-    }
-
-    .Header__navbar div {
-        border-radius: 3%;
-        text-align: center;
-        width: 18vw;
-        cursor: pointer;
-        background-color: green;
-        border: solid 1.5vw green;
-        font-weight: bold;
-    }
-
-    .Header__navbar div:hover {
-        border-color: yellow;
-        background-color: yellow;
-        color: blue;
-    }
-}
-
-@media(max-width: 599px) {
-    .Header {
-        display: flex;
-        justify-content: space-evenly;
-        background-color: green;
-        color: white;
-        padding: 2vw;
+        padding: 5px;
         position: fixed;
         top: 0;
         font-size: 3.5vw;
@@ -162,10 +54,10 @@
     .Header__navbar div {
         border-radius: 3%;
         text-align: center;
-        width: 18.5vw;
+        width: fit-content;
         cursor: pointer;
         background-color: green;
-        border: solid 2vw green;
+        border: solid 2px green;
         font-weight: bold;
     }
 
@@ -176,13 +68,13 @@
     }
 }
 
-@media(max-width: 419px) {
+@media(max-width: 759px) {
     .Header {
         display: flex;
         justify-content: space-evenly;
         background-color: green;
         color: white;
-        padding: 2.5vw;
+        padding: 5px;
         position: fixed;
         top: 0;
         font-size: 4vw;
@@ -198,10 +90,10 @@
     .Header__navbar div {
         border-radius: 3%;
         text-align: center;
-        width: 19vw;
+        width: fit-content;
         cursor: pointer;
         background-color: green;
-        border: solid 2.5vw green;
+        border: solid 2px green;
         font-weight: bold;
     }
 
@@ -212,13 +104,13 @@
     }
 }
 
-@media(max-width: 239px) {
+@media(max-width: 509px) {
     .Header {
         display: flex;
         justify-content: space-evenly;
         background-color: green;
         color: white;
-        padding: 3vw;
+        padding: 5px;
         position: fixed;
         top: 0;
         font-size: 4.5vw;
@@ -234,10 +126,46 @@
     .Header__navbar div {
         border-radius: 3%;
         text-align: center;
-        width: 19.5vw;
+        width: fit-content;
         cursor: pointer;
         background-color: green;
-        border: solid 3vw green;
+        border: solid 2px green;
+        font-weight: bold;
+    }
+
+    .Header__navbar div:hover {
+        border-color: yellow;
+        background-color: yellow;
+        color: blue;
+    }
+}
+
+@media(max-width: 259px) {
+    .Header {
+        display: flex;
+        justify-content: space-evenly;
+        background-color: green;
+        color: white;
+        padding: 5px;
+        position: fixed;
+        top: 0;
+        font-size: 5vw;
+    }
+
+    .Header__navbar {
+        display: flex;
+        justify-content: space-evenly;
+        width: 103vw;
+        background-color: green;
+    }
+
+    .Header__navbar div {
+        border-radius: 3%;
+        text-align: center;
+        width: fit-content;
+        cursor: pointer;
+        background-color: green;
+        border: solid 2px green;
         font-weight: bold;
     }
 
