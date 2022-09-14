@@ -16,8 +16,6 @@ export default function Notes() {
     getNotes();
   }, []);
 
-  console.log("teste");
-
   return (
     <div className="Notes">
       {notes.map((data, index) => (
