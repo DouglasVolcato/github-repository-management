@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Note from "../Note/Note";
 import { repositoryManagementApi } from "../Api/repositoryManagementApi";
 import { useEffect } from "react";
+import "./Notes.css";
 
 export default function Notes() {
   const [notes, setNotes] = useState([]);

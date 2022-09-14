@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { repositoryManagementApi } from "../Api/repositoryManagementApi";
+import "./Register.css";
 
 export default function Register() {
   const [registerUser, setRegisterUser] = useState();
@@ -20,38 +21,44 @@ export default function Register() {
 
   return (
     <div className="Register">
-      <form onSubmit={addNewUser}>
-        Name:
+      <h1 className="Register__h1">Register</h1>
+      <form className="Register__form" onSubmit={addNewUser}>
         <input
+          className="Register__form--input"
           type="text"
           name="name"
           required={true}
+          placeholder="Name"
           onChange={(event) => {
             setRegisterUser({ ...registerUser, name: event.target.value });
           }}
         />
         <br />
-        Email:
         <input
+          className="Register__form--input"
           type="email"
           name="email"
           required={true}
+          placeholder="Email"
           onChange={(event) => {
             setRegisterUser({ ...registerUser, email: event.target.value });
           }}
         />
         <br />
-        Password:
         <input
+          className="Register__form--input"
           type="password"
           name="password"
           required={true}
+          placeholder="Password"
           onChange={(event) => {
             setRegisterUser({ ...registerUser, password: event.target.value });
           }}
         />
         <br />
-        <button type="submit">Register</button>
+        <button className="Register__form--button" type="submit">
+          SUBMIT
+        </button>
       </form>
     </div>
   );

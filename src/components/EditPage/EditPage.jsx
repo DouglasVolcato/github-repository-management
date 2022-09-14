@@ -9,14 +9,15 @@ export default function EditPage(props) {
     event.preventDefault();
     setNewNote({ ...newNote });
     repositoryManagementApi.editRepo(props.data.name, newNote);
-    props.showEditModal()
+    props.showEditModal();
   }
 
   return (
     <div className="EditPage">
-      <form onSubmit={updateNote} className="EditPage_form">
+      <form onSubmit={updateNote} className="EditPage__form">
         Name:{" "}
         <input
+          className="EditPage__form--input"
           type="text"
           name="name"
           placeholder={props.data.name}
@@ -27,6 +28,7 @@ export default function EditPage(props) {
         <br />
         Priority:{" "}
         <input
+          className="EditPage__form--input"
           type="radio"
           name="priority"
           value="High"
@@ -36,6 +38,7 @@ export default function EditPage(props) {
         />{" "}
         High
         <input
+          className="EditPage__form--input"
           type="radio"
           name="priority"
           value="Medium"
@@ -45,6 +48,7 @@ export default function EditPage(props) {
         />{" "}
         Medium
         <input
+          className="EditPage__form--input"
           type="radio"
           name="priority"
           value="Low"
@@ -56,7 +60,7 @@ export default function EditPage(props) {
         <br />
         Note:{" "}
         <input
-          className="EditPage__form--note"
+          className="EditPage__form--input"
           type="text"
           name="note"
           placeholder={props.data.note}
@@ -65,8 +69,17 @@ export default function EditPage(props) {
           }}
         />{" "}
         <br />
-        <button onClick={() => props.showEditModal()}>Close</button>
-        <button type="submit">Submit</button>
+        <div className="EditPage__form--buttons">
+          <button
+            className="EditPage__form--closeButton"
+            onClick={() => props.showEditModal()}
+          >
+            CLOSE
+          </button>
+          <button className="EditPage__form--submitButton" type="submit">
+            SUBMIT
+          </button>
+        </div>
       </form>
     </div>
   );

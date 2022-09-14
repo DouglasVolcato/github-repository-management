@@ -1,4 +1,5 @@
 import { repositoryManagementApi } from "../Api/repositoryManagementApi";
+import "./Repository.css";
 
 export default function Repository(props) {
   async function createNote() {
@@ -12,12 +13,24 @@ export default function Repository(props) {
 
   if (props.repo.name.toLowerCase().includes(props.repoName.toLowerCase())) {
     return (
-      <section>
-        <div>{props.repo.name}</div>{" "}
-        <a href={props.repo.svn_url} target="_blank" rel="noreferrer">
-          <button>Access</button>
-        </a>
-        <button onClick={() => createNote()}>Add note</button>
+      <section className="Repository">
+        <div className="Repository__name">{props.repo.name}</div>
+        <div className="Repository__buttons">
+          <a
+            className="Repository__accessButton"
+            href={props.repo.svn_url}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <button className="Repository__accessButton2">ACCESS</button>
+          </a>
+          <button
+            className="Repository__addButton"
+            onClick={() => createNote()}
+          >
+            ADD NOTE
+          </button>
+        </div>
       </section>
     );
   }

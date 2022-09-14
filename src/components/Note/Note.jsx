@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { repositoryManagementApi } from "../Api/repositoryManagementApi";
 import EditPage from "../EditPage/EditPage";
+import "./Note.css";
 
 export default function Note(props) {
   const [editModal, setEditModal] = useState(false);
@@ -21,21 +22,32 @@ export default function Note(props) {
 
   return (
     <div className="Note">
-      <p>Name: {props.data.name}</p>
-      <p>Priority: {props.data.priority}</p>
-      <p>Note: {props.data.note}</p>
-      <a href={props.data.link} target="_blank" rel="noreferrer">
-        <button>Access</button>
-      </a>
-      <button
-        onClick={() => {
-          deleteNote(props.data.name);
-        }}
-      >
-        Delete
-      </button>
+      <p className="Note__name"> Name: {props.data.name}</p>
+      <p className="Note__priority">Priority: {props.data.priority}</p>
+      <p className="Note__note">Note: {props.data.note}</p>
 
-      <button onClick={() => showEditModal()}>Edit</button>
+      <div className="Note__buttons">
+        <a
+          className="Note__a"
+          href={props.data.link}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <button className="Note__accessButton">ACCESS</button>
+        </a>
+        <button
+          className="Note__deleteButton"
+          onClick={() => {
+            deleteNote(props.data.name);
+          }}
+        >
+          DELETE
+        </button>
+
+        <button className="Note__editButton" onClick={() => showEditModal()}>
+          EDIT
+        </button>
+      </div>
 
       {editModal === true ? (
         <EditPage data={props.data} showEditModal={showEditModal} />
