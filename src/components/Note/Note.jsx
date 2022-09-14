@@ -7,12 +7,16 @@ export default function Note(props) {
 
   async function deleteNote(repoName) {
     if (window.confirm("Are you sure to delete this note?")) {
+      props.getNotes();
       repositoryManagementApi.deleteRepo(repoName);
     }
+    props.getNotes();
   }
 
   function showEditModal() {
+    props.getNotes();
     editModal === false ? setEditModal(true) : setEditModal(false);
+    props.getNotes();
   }
 
   return (
@@ -34,7 +38,7 @@ export default function Note(props) {
       <button onClick={() => showEditModal()}>Edit</button>
 
       {editModal === true ? (
-        <EditPage data={props.data} showEditModal={showEditModal} reloadPage={props.reloadPage}/>
+        <EditPage data={props.data} showEditModal={showEditModal} />
       ) : (
         <></>
       )}
