@@ -1,44 +1,389 @@
-.Note{
+.Note {
     width: fit-content;
     margin: auto;
-    width: 25vw;
+    width: 30vw;
     border: solid 0.3vw rgb(200, 223, 0);
     background-color: rgb(172, 185, 110);
-    margin: 1.5vw;
-    padding: 0.5vw;
+    margin: 10px 5px 10px 5px;
+    padding: 10px;
     font-size: 1.6vw;
 }
-.Note__name, .Note__priority, .Note__note{
-    margin: 0.5vw;
+
+.Note__name, .Note__priority, .Note__note {
+    margin: 10px;
     background-color: rgb(172, 185, 110);
 }
-.Note__buttons{
+
+.Note__buttons {
     background-color: rgb(172, 185, 110);
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
 }
-.Note__accessButton, .Note__deleteButton, .Note__editButton{
-    font-size: 1.2vw;
-    width: 6vw;
-    padding: 0.3vw;
+
+.Note__accessButton, .Note__deleteButton, .Note__editButton {
+    font-size: inherit;
+    font-size: 20px;
+    width: 80px;
+    padding: 5px;
     background-color: rgb(216, 168, 45);
-    border: solid 0.1vw rgb(0, 0, 0);
+    border: solid 0.2px rgb(0, 0, 0);
     border-radius: 5%;
     cursor: pointer;
     font-weight: bold;
 }
-.Note__a{
+
+.Note__a {
     background-color: rgb(172, 185, 110);
 }
-.Note__accessButton:hover{
+
+.Note__accessButton:hover {
     background-color: blue;
     color: white;
 }
-.Note__deleteButton:hover{
+
+.Note__deleteButton:hover {
     background-color: rgb(223, 0, 0);
     color: white;
 }
-.Note__editButton:hover{
+
+.Note__editButton:hover {
     background-color: rgb(71, 209, 16);
     color: rgb(0, 0, 0);
+}
+
+@media(max-width: 1139px) {
+    .Note {
+        width: fit-content;
+        margin: auto;
+        width: 30vw;
+        border: solid 0.3vw rgb(200, 223, 0);
+        background-color: rgb(172, 185, 110);
+        margin: 10px 5px 10px 5px;
+        padding: 10px;
+        font-size: 1.6vw;
+    }
+
+    .Note__name, .Note__priority, .Note__note {
+        margin: 10px;
+        background-color: rgb(172, 185, 110);
+    }
+
+    .Note__buttons {
+        background-color: rgb(172, 185, 110);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .Note__accessButton, .Note__deleteButton, .Note__editButton {
+        font-size: inherit;
+        font-size: 20px;
+        width: 80px;
+        padding: 5px;
+        background-color: rgb(216, 168, 45);
+        border: solid 0.2px rgb(0, 0, 0);
+        border-radius: 5%;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    .Note__a {
+        background-color: rgb(172, 185, 110);
+    }
+
+    .Note__accessButton:hover {
+        background-color: blue;
+        color: white;
+    }
+
+    .Note__deleteButton:hover {
+        background-color: rgb(223, 0, 0);
+        color: white;
+    }
+
+    .Note__editButton:hover {
+        background-color: rgb(71, 209, 16);
+        color: rgb(0, 0, 0);
+    }
+}
+
+@media(max-width: 959px) {
+    .Note {
+        width: fit-content;
+        margin: auto;
+        width: 30.5vw;
+        border: solid 0.8vw rgb(200, 223, 0);
+        background-color: rgb(172, 185, 110);
+        margin: 10px 5px 10px 5px;
+        padding: 10px;
+        font-size: 2.1vw;
+    }
+
+    .Note__name, .Note__priority, .Note__note {
+        margin: 10px;
+        background-color: rgb(172, 185, 110);
+    }
+
+    .Note__buttons {
+        background-color: rgb(172, 185, 110);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .Note__accessButton, .Note__deleteButton, .Note__editButton {
+        font-size: inherit;
+        font-size: 20px;
+        width: 80px;
+        padding: 5px;
+        background-color: rgb(216, 168, 45);
+        border: solid 0.2px rgb(0, 0, 0);
+        border-radius: 5%;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    .Note__a {
+        background-color: rgb(172, 185, 110);
+    }
+
+    .Note__accessButton:hover {
+        background-color: blue;
+        color: white;
+    }
+
+    .Note__deleteButton:hover {
+        background-color: rgb(223, 0, 0);
+        color: white;
+    }
+
+    .Note__editButton:hover {
+        background-color: rgb(71, 209, 16);
+        color: rgb(0, 0, 0);
+    }
+}
+
+@media(max-width: 779px) {
+    .Note {
+        width: fit-content;
+        margin: auto;
+        width: 31vw;
+        border: solid 1.3vw rgb(200, 223, 0);
+        background-color: rgb(172, 185, 110);
+        margin: 10px 5px 10px 5px;
+        padding: 10px;
+        font-size: 2.6vw;
+    }
+
+    .Note__name, .Note__priority, .Note__note {
+        margin: 10px;
+        background-color: rgb(172, 185, 110);
+    }
+
+    .Note__buttons {
+        background-color: rgb(172, 185, 110);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .Note__accessButton, .Note__deleteButton, .Note__editButton {
+        font-size: inherit;
+        font-size: 20px;
+        width: 80px;
+        padding: 5px;
+        background-color: rgb(216, 168, 45);
+        border: solid 0.2px rgb(0, 0, 0);
+        border-radius: 5%;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    .Note__a {
+        background-color: rgb(172, 185, 110);
+    }
+
+    .Note__accessButton:hover {
+        background-color: blue;
+        color: white;
+    }
+
+    .Note__deleteButton:hover {
+        background-color: rgb(223, 0, 0);
+        color: white;
+    }
+
+    .Note__editButton:hover {
+        background-color: rgb(71, 209, 16);
+        color: rgb(0, 0, 0);
+    }
+}
+
+@media(max-width: 599px) {
+    .Note {
+        width: fit-content;
+        margin: auto;
+        width: 38.5vw;
+        border: solid 1.8vw rgb(200, 223, 0);
+        background-color: rgb(172, 185, 110);
+        margin: 10px 5px 10px 5px;
+        padding: 10px;
+        font-size: 3.1vw;
+    }
+
+    .Note__name, .Note__priority, .Note__note {
+        margin: 10px;
+        background-color: rgb(172, 185, 110);
+    }
+
+    .Note__buttons {
+        background-color: rgb(172, 185, 110);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .Note__accessButton, .Note__deleteButton, .Note__editButton {
+        font-size: inherit;
+        font-size: 20px;
+        width: 80px;
+        padding: 5px;
+        background-color: rgb(216, 168, 45);
+        border: solid 0.2px rgb(0, 0, 0);
+        border-radius: 5%;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    .Note__a {
+        background-color: rgb(172, 185, 110);
+    }
+
+    .Note__accessButton:hover {
+        background-color: blue;
+        color: white;
+    }
+
+    .Note__deleteButton:hover {
+        background-color: rgb(223, 0, 0);
+        color: white;
+    }
+
+    .Note__editButton:hover {
+        background-color: rgb(71, 209, 16);
+        color: rgb(0, 0, 0);
+    }
+}
+
+@media(max-width: 419px) {
+    .Note {
+        width: fit-content;
+        margin: auto;
+        width: 38vw;
+        border: solid 2.3vw rgb(200, 223, 0);
+        background-color: rgb(172, 185, 110);
+        margin: 10px 5px 10px 5px;
+        padding: 10px;
+        font-size: 3.6vw;
+    }
+
+    .Note__name, .Note__priority, .Note__note {
+        margin: 10px;
+        background-color: rgb(172, 185, 110);
+    }
+
+    .Note__buttons {
+        background-color: rgb(172, 185, 110);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .Note__accessButton, .Note__deleteButton, .Note__editButton {
+        font-size: inherit;
+        font-size: 20px;
+        width: 80px;
+        padding: 5px;
+        background-color: rgb(216, 168, 45);
+        border: solid 0.2px rgb(0, 0, 0);
+        border-radius: 5%;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    .Note__a {
+        background-color: rgb(172, 185, 110);
+    }
+
+    .Note__accessButton:hover {
+        background-color: blue;
+        color: white;
+    }
+
+    .Note__deleteButton:hover {
+        background-color: rgb(223, 0, 0);
+        color: white;
+    }
+
+    .Note__editButton:hover {
+        background-color: rgb(71, 209, 16);
+        color: rgb(0, 0, 0);
+    }
+}
+
+@media(max-width: 239px) {
+    .Note {
+        width: fit-content;
+        margin: auto;
+        width: 32.5vw;
+        border: solid 2.8vw rgb(200, 223, 0);
+        background-color: rgb(172, 185, 110);
+        margin: 10px 5px 10px 5px;
+        padding: 10px;
+        font-size: 4.1vw;
+    }
+
+    .Note__name, .Note__priority, .Note__note {
+        margin: 10px;
+        background-color: rgb(172, 185, 110);
+    }
+
+    .Note__buttons {
+        background-color: rgb(172, 185, 110);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .Note__accessButton, .Note__deleteButton, .Note__editButton {
+        font-size: inherit;
+        font-size: 20px;
+        width: 80px;
+        padding: 5px;
+        background-color: rgb(216, 168, 45);
+        border: solid 0.2px rgb(0, 0, 0);
+        border-radius: 5%;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    .Note__a {
+        background-color: rgb(172, 185, 110);
+    }
+
+    .Note__accessButton:hover {
+        background-color: blue;
+        color: white;
+    }
+
+    .Note__deleteButton:hover {
+        background-color: rgb(223, 0, 0);
+        color: white;
+    }
+
+    .Note__editButton:hover {
+        background-color: rgb(71, 209, 16);
+        color: rgb(0, 0, 0);
+    }
 }

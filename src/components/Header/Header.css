@@ -1,20 +1,22 @@
-.Header{
+.Header {
     display: flex;
     justify-content: space-evenly;
     background-color: green;
     color: white;
     padding: 0.5vw;
-    position:fixed;
+    position: fixed;
     top: 0;
     font-size: 2vw;
 }
-.Header__navbar{
+
+.Header__navbar {
     display: flex;
     justify-content: space-evenly;
     width: 100vw;
     background-color: green;
 }
-.Header__navbar div{
+
+.Header__navbar div {
     border-radius: 3%;
     text-align: center;
     width: 17vw;
@@ -23,8 +25,225 @@
     border: solid 0.5vw green;
     font-weight: bold;
 }
-.Header__navbar div:hover{
+
+.Header__navbar div:hover {
     border-color: yellow;
     background-color: yellow;
     color: blue;
+}
+
+@media(max-width: 1139px) {
+    .Header {
+        display: flex;
+        justify-content: space-evenly;
+        background-color: green;
+        color: white;
+        padding: 0.5vw;
+        position: fixed;
+        top: 0;
+        font-size: 2vw;
+    }
+
+    .Header__navbar {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100vw;
+        background-color: green;
+    }
+
+    .Header__navbar div {
+        border-radius: 3%;
+        text-align: center;
+        width: 17vw;
+        cursor: pointer;
+        background-color: green;
+        border: solid 0.5vw green;
+        font-weight: bold;
+    }
+
+    .Header__navbar div:hover {
+        border-color: yellow;
+        background-color: yellow;
+        color: blue;
+    }
+}
+
+@media(max-width: 959px) {
+    .Header {
+        display: flex;
+        justify-content: space-evenly;
+        background-color: green;
+        color: white;
+        padding: 1vw;
+        position: fixed;
+        top: 0;
+        font-size: 2.5vw;
+    }
+
+    .Header__navbar {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100.5vw;
+        background-color: green;
+    }
+
+    .Header__navbar div {
+        border-radius: 3%;
+        text-align: center;
+        width: 17.5vw;
+        cursor: pointer;
+        background-color: green;
+        border: solid 1vw green;
+        font-weight: bold;
+    }
+
+    .Header__navbar div:hover {
+        border-color: yellow;
+        background-color: yellow;
+        color: blue;
+    }
+}
+
+@media(max-width: 779px) {
+    .Header {
+        display: flex;
+        justify-content: space-evenly;
+        background-color: green;
+        color: white;
+        padding: 1.5vw;
+        position: fixed;
+        top: 0;
+        font-size: 3vw;
+    }
+
+    .Header__navbar {
+        display: flex;
+        justify-content: space-evenly;
+        width: 101vw;
+        background-color: green;
+    }
+
+    .Header__navbar div {
+        border-radius: 3%;
+        text-align: center;
+        width: 18vw;
+        cursor: pointer;
+        background-color: green;
+        border: solid 1.5vw green;
+        font-weight: bold;
+    }
+
+    .Header__navbar div:hover {
+        border-color: yellow;
+        background-color: yellow;
+        color: blue;
+    }
+}
+
+@media(max-width: 599px) {
+    .Header {
+        display: flex;
+        justify-content: space-evenly;
+        background-color: green;
+        color: white;
+        padding: 2vw;
+        position: fixed;
+        top: 0;
+        font-size: 3.5vw;
+    }
+
+    .Header__navbar {
+        display: flex;
+        justify-content: space-evenly;
+        width: 101.5vw;
+        background-color: green;
+    }
+
+    .Header__navbar div {
+        border-radius: 3%;
+        text-align: center;
+        width: 18.5vw;
+        cursor: pointer;
+        background-color: green;
+        border: solid 2vw green;
+        font-weight: bold;
+    }
+
+    .Header__navbar div:hover {
+        border-color: yellow;
+        background-color: yellow;
+        color: blue;
+    }
+}
+
+@media(max-width: 419px) {
+    .Header {
+        display: flex;
+        justify-content: space-evenly;
+        background-color: green;
+        color: white;
+        padding: 2.5vw;
+        position: fixed;
+        top: 0;
+        font-size: 4vw;
+    }
+
+    .Header__navbar {
+        display: flex;
+        justify-content: space-evenly;
+        width: 102vw;
+        background-color: green;
+    }
+
+    .Header__navbar div {
+        border-radius: 3%;
+        text-align: center;
+        width: 19vw;
+        cursor: pointer;
+        background-color: green;
+        border: solid 2.5vw green;
+        font-weight: bold;
+    }
+
+    .Header__navbar div:hover {
+        border-color: yellow;
+        background-color: yellow;
+        color: blue;
+    }
+}
+
+@media(max-width: 239px) {
+    .Header {
+        display: flex;
+        justify-content: space-evenly;
+        background-color: green;
+        color: white;
+        padding: 3vw;
+        position: fixed;
+        top: 0;
+        font-size: 4.5vw;
+    }
+
+    .Header__navbar {
+        display: flex;
+        justify-content: space-evenly;
+        width: 102.5vw;
+        background-color: green;
+    }
+
+    .Header__navbar div {
+        border-radius: 3%;
+        text-align: center;
+        width: 19.5vw;
+        cursor: pointer;
+        background-color: green;
+        border: solid 3vw green;
+        font-weight: bold;
+    }
+
+    .Header__navbar div:hover {
+        border-color: yellow;
+        background-color: yellow;
+        color: blue;
+    }
 }
