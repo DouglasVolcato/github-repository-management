@@ -5,11 +5,7 @@ import { useEffect } from "react";
 
 export default function Notes() {
   const [notes, setNotes] = useState([]);
-  const [reload, setReload] = useState(0);
 
-  function reloadPage() {
-    setReload(reload + 1);
-  }
   async function getNotes() {
     const data = await repositoryManagementApi.getAllRepo();
     setNotes([...data]);
@@ -17,12 +13,14 @@ export default function Notes() {
 
   useEffect(() => {
     getNotes();
-  }, [reload]);
+  }, []);
+
+  console.log("teste");
 
   return (
-    <div className="Notes" onChange={getNotes}>
+    <div className="Notes">
       {notes.map((data, index) => (
-        <Note data={data} key={index} reloadPage={reloadPage} />
+        <Note data={data} key={index} getNotes={getNotes} />
       ))}
     </div>
   );
