@@ -2,14 +2,28 @@
     width: fit-content;
     margin: auto;
     width: 30vw;
-    border: solid 0.3vw rgb(200, 223, 0);
+    border: solid 10px rgb(200, 223, 0);
     background-color: rgb(172, 185, 110);
     margin: 10px 5px 10px 5px;
     padding: 10px;
     font-size: 1.6vw;
 }
 
+.highPriority{
+    border-color: red;
+}
+
+.mediumPriority{
+    border-color: rgb(255, 230, 0);
+}
+
+.lowPriority{
+    border-color: rgb(0, 162, 255);
+    
+}
+
 .Note__name, .Note__priority, .Note__note {
+    text-align: center;
     margin: 10px;
     background-color: rgb(172, 185, 110);
 }
