@@ -12,11 +12,13 @@ export default function Note(props) {
       repositoryManagementApi.deleteRepo(repoName);
     }
     props.getNotes();
+    props.getNotes();
   }
 
   function showEditModal() {
     props.getNotes();
     editModal === false ? setEditModal(true) : setEditModal(false);
+    props.getNotes();
     props.getNotes();
   }
 
