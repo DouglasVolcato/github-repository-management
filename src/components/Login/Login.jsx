@@ -4,6 +4,11 @@ import "./Login.css";
 
 export default function Login(props) {
   const [loginUser, setLoginUser] = useState();
+  const [loginInfo, setLoginInfo] = useState({ email: "", password: "" });
+
+  function handleChange() {
+    setLoginInfo({ email: "", password: "" });
+  }
 
   async function logUser(event) {
     event.preventDefault();
@@ -17,6 +22,7 @@ export default function Login(props) {
         alert("Email not registered.");
       }
     } catch (err) {
+      handleChange();
       alert("Successfully logged in!");
     }
   }
@@ -31,8 +37,10 @@ export default function Login(props) {
           name="email"
           required={true}
           placeholder="Email"
+          value={loginInfo.email}
           onChange={(event) => {
             setLoginUser({ ...loginUser, email: event.target.value });
+            setLoginInfo({ ...loginInfo, email: event.target.value });
           }}
         />
         <br />
@@ -42,8 +50,10 @@ export default function Login(props) {
           name="password"
           required={true}
           placeholder="Password"
+          value={loginInfo.password}
           onChange={(event) => {
             setLoginUser({ ...loginUser, password: event.target.value });
+            setLoginInfo({ ...loginInfo, password: event.target.value });
           }}
         />
         <br />

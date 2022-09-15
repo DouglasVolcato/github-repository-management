@@ -4,6 +4,19 @@ import "./Register.css";
 
 export default function Register() {
   const [registerUser, setRegisterUser] = useState();
+  const [registerInfo, setRegisterInfo] = useState({
+    name: "",
+    email: "",
+    password: "",
+  });
+
+  function handleChange() {
+    setRegisterInfo({
+      name: "",
+      email: "",
+      password: "",
+    });
+  }
 
   async function addNewUser(event) {
     event.preventDefault();
@@ -15,6 +28,7 @@ export default function Register() {
         alert("Email already registrated.");
       }
     } catch (err) {
+      handleChange();
       alert("Successfully registered!");
     }
   }
@@ -29,8 +43,10 @@ export default function Register() {
           name="name"
           required={true}
           placeholder="Name"
+          value={registerInfo.name}
           onChange={(event) => {
             setRegisterUser({ ...registerUser, name: event.target.value });
+            setRegisterInfo({ ...registerInfo, name: event.target.value });
           }}
         />
         <br />
@@ -40,8 +56,10 @@ export default function Register() {
           name="email"
           required={true}
           placeholder="Email"
+          value={registerInfo.email}
           onChange={(event) => {
             setRegisterUser({ ...registerUser, email: event.target.value });
+            setRegisterInfo({ ...registerInfo, email: event.target.value });
           }}
         />
         <br />
@@ -51,8 +69,10 @@ export default function Register() {
           name="password"
           required={true}
           placeholder="Password"
+          value={registerInfo.password}
           onChange={(event) => {
             setRegisterUser({ ...registerUser, password: event.target.value });
+            setRegisterInfo({ ...registerInfo, password: event.target.value });
           }}
         />
         <br />
