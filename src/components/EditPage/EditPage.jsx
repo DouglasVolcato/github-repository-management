@@ -31,18 +31,20 @@ export default function EditPage(props) {
           }}
         />
         <br />
-        Priority:<select
+        Priority:
+        <select
           className="EditPage__form--input"
           onChange={(event) => {
             setNewNote({ ...newNote, priority: event.target.value });
           }}
         >
+          <option value=""></option>
           <option value="High">High</option>
           <option value="Medium">Medium</option>
           <option value="Low">Low</option>
         </select>
         <br />
-        Note:{" "}
+        Note:
         <textarea
           className="EditPage__form--input"
           type="text"

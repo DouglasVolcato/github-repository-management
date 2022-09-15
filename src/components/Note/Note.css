@@ -2,7 +2,8 @@
     width: fit-content;
     margin: auto;
     width: 30vw;
-    border: solid 10px rgb(200, 223, 0);
+    border-style: solid;
+    border-width: 10px;
     background-color: rgb(172, 185, 110);
     margin: 10px 5px 10px 5px;
     padding: 10px;
@@ -10,15 +11,15 @@
 }
 
 .highPriority{
-    border-color: red;
+    border: solid 10px red;
 }
 
 .mediumPriority{
-    border-color: rgb(255, 230, 0);
+    border: solid 10px yellow;
 }
 
 .lowPriority{
-    border-color: rgb(0, 162, 255);
+    border: solid 10px rgb(0, 110, 255);
     
 }
 
@@ -71,7 +72,6 @@
         width: fit-content;
         margin: auto;
         width: 30vw;
-        border: solid 0.3vw rgb(200, 223, 0);
         background-color: rgb(172, 185, 110);
         margin: 10px 5px 10px 5px;
         padding: 10px;
@@ -127,7 +127,6 @@
         width: fit-content;
         margin: auto;
         width: 30.5vw;
-        border: solid 0.8vw rgb(200, 223, 0);
         background-color: rgb(172, 185, 110);
         margin: 10px 5px 10px 5px;
         padding: 10px;
@@ -183,7 +182,6 @@
         width: fit-content;
         margin: auto;
         width: 31vw;
-        border: solid 1.3vw rgb(200, 223, 0);
         background-color: rgb(172, 185, 110);
         margin: 10px 5px 10px 5px;
         padding: 10px;
@@ -239,7 +237,6 @@
         width: fit-content;
         margin: auto;
         width: 38.5vw;
-        border: solid 1.8vw rgb(200, 223, 0);
         background-color: rgb(172, 185, 110);
         margin: 10px 5px 10px 5px;
         padding: 10px;
@@ -295,7 +292,6 @@
         width: fit-content;
         margin: auto;
         width: 38vw;
-        border: solid 2.3vw rgb(200, 223, 0);
         background-color: rgb(172, 185, 110);
         margin: 10px 5px 10px 5px;
         padding: 10px;
@@ -351,7 +347,6 @@
         width: fit-content;
         margin: auto;
         width: 32.5vw;
-        border: solid 2.8vw rgb(200, 223, 0);
         background-color: rgb(172, 185, 110);
         margin: 10px 5px 10px 5px;
         padding: 10px;
