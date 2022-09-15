@@ -37,7 +37,7 @@ export default function Repositories() {
           className="Repositories__form--input"
           type="text"
           name="name"
-          placeholder="Repository name"
+          placeholder="Repository name / ID"
         ></input>
         <button className="Repositories__form--button" type="submit">
           SEARCH

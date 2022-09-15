@@ -11,9 +11,16 @@ export default function Repository(props) {
     });
   }
 
-  if (props.repo.name.toLowerCase().includes(props.repoName.toLowerCase())) {
+  if (
+    props.repo.name.toLowerCase().includes(props.repoName.toLowerCase()) ||
+    props.repo.id
+      .toString()
+      .toLowerCase()
+      .includes(props.repoName.toLowerCase())
+  ) {
     return (
       <section className="Repository">
+        <div className="Repository__id">ID: {props.repo.id}</div>
         <div className="Repository__name">{props.repo.name}</div>
         <div className="Repository__buttons">
           <a
