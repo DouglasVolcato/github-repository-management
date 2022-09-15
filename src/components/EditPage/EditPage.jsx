@@ -29,45 +29,25 @@ export default function EditPage(props) {
             setNewNote({ ...newNote, name: event.target.value });
             setNoteInfo({ ...noteInfo, name: event.target.value });
           }}
-        />{" "}
+        />
         <br />
-        Priority:{" "}
-        <input
+        Priority:<select
           className="EditPage__form--input"
-          type="radio"
-          name="priority"
-          value="High"
           onChange={(event) => {
             setNewNote({ ...newNote, priority: event.target.value });
           }}
-        />{" "}
-        High
-        <input
-          className="EditPage__form--input"
-          type="radio"
-          name="priority"
-          value="Medium"
-          onChange={(event) => {
-            setNewNote({ ...newNote, priority: event.target.value });
-          }}
-        />{" "}
-        Medium
-        <input
-          className="EditPage__form--input"
-          type="radio"
-          name="priority"
-          value="Low"
-          onChange={(event) => {
-            setNewNote({ ...newNote, priority: event.target.value });
-          }}
-        />{" "}
-        Low
+        >
+          <option value="High">High</option>
+          <option value="Medium">Medium</option>
+          <option value="Low">Low</option>
+        </select>
         <br />
         Note:{" "}
         <textarea
-          className="EditPage__form--inputNote"
+          className="EditPage__form--input"
           type="text"
           name="note"
+          rows={5}
           value={noteInfo.note}
           onChange={(event) => {
             setNewNote({ ...newNote, note: event.target.value });
