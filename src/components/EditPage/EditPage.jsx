@@ -4,6 +4,10 @@ import { repositoryManagementApi } from "../Api/repositoryManagementApi";
 
 export default function EditPage(props) {
   const [newNote, setNewNote] = useState();
+  const [noteInfo, setNoteInfo] = useState({
+    name: props.data.name,
+    note: props.data.note,
+  });
 
   async function updateNote(event) {
     event.preventDefault();
@@ -20,9 +24,10 @@ export default function EditPage(props) {
           className="EditPage__form--input"
           type="text"
           name="name"
-          placeholder={props.data.name}
+          value={noteInfo.name}
           onChange={(event) => {
             setNewNote({ ...newNote, name: event.target.value });
+            setNoteInfo({ ...noteInfo, name: event.target.value });
           }}
         />{" "}
         <br />
@@ -63,9 +68,10 @@ export default function EditPage(props) {
           className="EditPage__form--inputNote"
           type="text"
           name="note"
-          placeholder={props.data.note}
+          value={noteInfo.note}
           onChange={(event) => {
             setNewNote({ ...newNote, note: event.target.value });
+            setNoteInfo({ ...noteInfo, note: event.target.value });
           }}
         />{" "}
         <br />
