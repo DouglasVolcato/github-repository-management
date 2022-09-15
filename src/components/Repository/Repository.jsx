@@ -20,7 +20,9 @@ export default function Repository(props) {
   ) {
     return (
       <section className="Repository">
-        <div className="Repository__id">ID: {props.repo.id}</div>
+        <div className="Repository__id Repository__name">
+          ID: {props.repo.id}
+        </div>
         <div className="Repository__name">{props.repo.name}</div>
         <div className="Repository__buttons">
           <a
