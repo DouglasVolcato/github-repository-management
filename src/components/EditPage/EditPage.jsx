@@ -59,8 +59,8 @@ export default function EditPage(props) {
         Low
         <br />
         Note:{" "}
-        <input
-          className="EditPage__form--input"
+        <textarea
+          className="EditPage__form--inputNote"
           type="text"
           name="note"
           placeholder={props.data.note}
