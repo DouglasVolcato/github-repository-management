@@ -20,8 +20,16 @@ export default function Note(props) {
     props.getNotes();
   }
 
+  function borderColor() {
+    return props.data.priority === "High"
+      ? "highPriority Note"
+      : props.data.priority === "Medium"
+      ? "mediumPriority Note"
+      : "lowPriority Note";
+  }
+
   return (
-    <div className="Note">
+    <div className={borderColor()}>
       <p className="Note__name"> Name: {props.data.name}</p>
       <p className="Note__priority">Priority: {props.data.priority}</p>
       <p className="Note__note">Note: {props.data.note}</p>
