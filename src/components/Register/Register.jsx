@@ -3,11 +3,13 @@ import { repositoryManagementApi } from "../Api/repositoryManagementApi";
 import "./Register.css";
 
 export default function Register() {
+  const [userImage, setUserImage] = useState("");
   const [registerUser, setRegisterUser] = useState();
   const [registerInfo, setRegisterInfo] = useState({
     name: "",
     email: "",
     password: "",
+    photo: "",
   });
 
   function handleChange() {
@@ -15,6 +17,7 @@ export default function Register() {
       name: "",
       email: "",
       password: "",
+      photo: "",
     });
   }
 
@@ -76,10 +79,31 @@ export default function Register() {
           }}
         />
         <br />
+        <input
+          className="Register__form--input"
+          type="link"
+          name="password"
+          required={true}
+          placeholder="Photo"
+          value={registerInfo.photo}
+          onChange={(event) => {
+            setRegisterUser({ ...registerUser, photo: event.target.value });
+            setRegisterInfo({ ...registerInfo, photo: event.target.value });
+            setUserImage(event.target.value);
+          }}
+        />
+        <br />
         <button className="Register__form--button" type="submit">
           SUBMIT
         </button>
       </form>
+      <div className="Register__image .Register">
+        {userImage === "" || userImage === undefined ? (
+          <span></span>
+        ) : (
+          <img className="Register__image--img" src={userImage} alt="User profile" />
+        )}
+      </div>
     </div>
   );
 }

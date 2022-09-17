@@ -34,6 +34,20 @@
     color: white;
 }
 
+.Register__image{
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.Register__image--img{
+    width: 250px;
+    min-width: 10%;
+    max-width: 80%;
+    border-radius: 5%;
+}
+
 @media(max-width: 1139px) {
     .Register {
         padding: 10px;
