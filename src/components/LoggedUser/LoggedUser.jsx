@@ -8,6 +8,7 @@ export default function LoggedUser(props) {
   async function getLoggedUser() {
     const response = await repositoryManagementApi.getUserById();
     setUser({ ...response });
+    props.setFullUserProfile({ ...response });
   }
 
   useEffect(() => {
@@ -17,7 +18,13 @@ export default function LoggedUser(props) {
   return (
     <div className="LoggedUser">
       {user.name ? (
-        <button className="LoggedUser__logged">✓ Logged as {user.name}</button>
+        <button
+          type="button"
+          className="LoggedUser__logged"
+          onClick={() => props.setShowUserModal(true)}
+        >
+          ✓ Logged as {user.name}
+        </button>
       ) : (
         <div>
           <h2 className="LoggedUser__notLogged">Make login to access</h2>
