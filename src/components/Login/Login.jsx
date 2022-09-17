@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { repositoryManagementApi } from "../Api/repositoryManagementApi";
+import LoggedUser from "../LoggedUser/LoggedUser";
 import "./Login.css";
 
 export default function Login(props) {
@@ -60,6 +61,7 @@ export default function Login(props) {
         <button className="Login__form--button" type="submit">
           SUBMIT
         </button>
+        <LoggedUser loginInfo={loginInfo} />
       </form>
     </div>
   );
