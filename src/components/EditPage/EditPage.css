@@ -39,6 +39,7 @@
     width: 100px;
     margin: 0.5vw;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .EditPage__form--submitButton:hover, .EditPage__form--closeButton:hover {
