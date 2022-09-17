@@ -71,8 +71,10 @@ export const repositoryManagementApi = {
       body: JSON.stringify({ ...body }),
     });
     const data = await response.json();
+    localStorage.removeItem("userId");
     localStorage.removeItem("userToken");
     localStorage.setItem("userToken", data.token);
+    localStorage.setItem("userId", data.userId);
     return data;
   },
 
@@ -84,6 +86,20 @@ export const repositoryManagementApi = {
         "Content-Type": "application/json",
       }),
       body: JSON.stringify({ ...userBody }),
+    });
+    const data = await response.json();
+    return data;
+  },
+
+  getUserById: async () => {
+    const id = localStorage.getItem("userId");
+    const response = await fetch(baseUrl + "/user/get-by-id-user/" + id, {
+      method: "GET",
+      headers: new Headers({
+        Authorization: "Bearer " + localStorage.getItem("userToken"),
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      }),
     });
     const data = await response.json();
     return data;
