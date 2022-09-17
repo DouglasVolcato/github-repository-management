@@ -9,7 +9,17 @@ export default function Repositories() {
 
   async function selectName(event) {
     event.preventDefault();
-    const repos = await gitHubApi.getRepositories(event.target.name.value);
+    const repos = await gitHubApi
+      .getRepositories(event.target.name.value)
+      .then((data) =>
+        data.sort((a, b) => {
+          return a.name.toLowerCase() < b.name.toLowerCase()
+            ? -1
+            : a.name.toLowerCase() > b.name.toLowerCase()
+            ? 1
+            : 0;
+        })
+      );
     setRepositories([...repos]);
   }
 
