@@ -12,9 +12,10 @@ export default function UserProfile(props) {
 
   async function deleteUser() {
     if (window.confirm("Are you sure to delete your profile?")) {
-      repositoryManagementApi.deleteUser();
-      props.setShowUserModal(false);
-      window.location.reload();
+      await repositoryManagementApi.deleteUser().then(() => {
+        props.setShowUserModal(false);
+        window.location.reload();
+      });
     }
   }
 

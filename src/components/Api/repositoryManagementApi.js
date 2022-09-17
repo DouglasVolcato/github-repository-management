@@ -115,6 +115,8 @@ export const repositoryManagementApi = {
       }),
     });
     const data = await response.json();
+    localStorage.removeItem("userId");
+    localStorage.removeItem("userToken");
     return data;
   },
 
