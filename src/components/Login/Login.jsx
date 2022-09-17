@@ -1,9 +1,12 @@
 import { useState } from "react";
 import { repositoryManagementApi } from "../Api/repositoryManagementApi";
 import LoggedUser from "../LoggedUser/LoggedUser";
+import UserProfile from "../UserProfile/UserProfile";
 import "./Login.css";
 
 export default function Login(props) {
+  const [showUserModal, setShowUserModal] = useState(false);
+  const [fullUserProfile, setFullUserProfile] = useState();
   const [loginUser, setLoginUser] = useState();
   const [loginInfo, setLoginInfo] = useState({ email: "", password: "" });
 
@@ -19,8 +22,10 @@ export default function Login(props) {
     try {
       if (apiAnswer.message.includes("Wrong password.")) {
         alert("Wrong password.");
+        window.location.reload();
       } else if (apiAnswer.message.includes("Email not found.")) {
         alert("Email not registered.");
+        window.location.reload();
       }
     } catch (err) {
       handleChange();
@@ -61,8 +66,21 @@ export default function Login(props) {
         <button className="Login__form--button" type="submit">
           SUBMIT
         </button>
-        <LoggedUser loginInfo={loginInfo} />
+        <LoggedUser
+          loginInfo={loginInfo}
+          setFullUserProfile={setFullUserProfile}
+          setShowUserModal={setShowUserModal}
+        />
       </form>
+      {showUserModal === false ? (
+        <span></span>
+      ) : (
+        <UserProfile
+          user={fullUserProfile}
+          setShowUserModal={setShowUserModal}
+          setFullUserProfile={setFullUserProfile}
+        />
+      )}
     </div>
   );
 }
