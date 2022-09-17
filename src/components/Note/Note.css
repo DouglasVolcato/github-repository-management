@@ -182,7 +182,7 @@
     .Note {
         width: fit-content;
         margin: auto;
-        width: 31vw;
+        width: 40vw;
         background-color: rgb(172, 185, 110);
         margin: 10px 5px 10px 5px;
         padding: 10px;
@@ -237,11 +237,11 @@
     .Note {
         width: fit-content;
         margin: auto;
-        width: 38.5vw;
+        width: 43vw;
         background-color: rgb(172, 185, 110);
         margin: 10px 5px 10px 5px;
         padding: 10px;
-        font-size: 3.1vw;
+        font-size: 4vw;
     }
 
     .Note__name, .Note__priority, .Note__note {
@@ -288,15 +288,15 @@
     }
 }
 
-@media(max-width: 419px) {
+@media(max-width: 450px) {
     .Note {
         width: fit-content;
         margin: auto;
-        width: 38vw;
+        width: 70vw;
         background-color: rgb(172, 185, 110);
         margin: 10px 5px 10px 5px;
         padding: 10px;
-        font-size: 3.6vw;
+        font-size: 5vw;
     }
 
     .Note__name, .Note__priority, .Note__note {
@@ -347,11 +347,11 @@
     .Note {
         width: fit-content;
         margin: auto;
-        width: 32.5vw;
+        width: 80vw;
         background-color: rgb(172, 185, 110);
         margin: 10px 5px 10px 5px;
         padding: 10px;
-        font-size: 4.1vw;
+        font-size: 5.5vw;
     }
 
     .Note__name, .Note__priority, .Note__note {
