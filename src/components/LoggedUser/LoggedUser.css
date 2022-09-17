@@ -8,6 +8,7 @@
 }
 
 .LoggedUser__logged {
+    font-weight: bold;
     border: solid 2px green;
     font-size: 1.3vw;
     height: 100%;
