@@ -62,6 +62,8 @@ export const repositoryManagementApi = {
   },
 
   login: async (body) => {
+    localStorage.removeItem("userId");
+    localStorage.removeItem("userToken");
     const response = await fetch(baseUrl + "/auth/login", {
       method: "POST",
       headers: new Headers({
@@ -71,8 +73,6 @@ export const repositoryManagementApi = {
       body: JSON.stringify({ ...body }),
     });
     const data = await response.json();
-    localStorage.removeItem("userId");
-    localStorage.removeItem("userToken");
     localStorage.setItem("userToken", data.token);
     localStorage.setItem("userId", data.userId);
     return data;
@@ -100,6 +100,33 @@ export const repositoryManagementApi = {
         Accept: "application/json",
         "Content-Type": "application/json",
       }),
+    });
+    const data = await response.json();
+    return data;
+  },
+
+  deleteUser: async () => {
+    const response = await fetch(baseUrl + "/user/delete-user/", {
+      method: "DELETE",
+      headers: new Headers({
+        Authorization: "Bearer " + localStorage.getItem("userToken"),
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      }),
+    });
+    const data = await response.json();
+    return data;
+  },
+
+  editUser: async (userBody) => {
+    const response = await fetch(baseUrl + "/user/update-user/", {
+      method: "PUT",
+      headers: new Headers({
+        Authorization: "Bearer " + localStorage.getItem("userToken"),
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      }),
+      body: JSON.stringify({ ...userBody }),
     });
     const data = await response.json();
     return data;
