@@ -24,6 +24,7 @@
 }
 
 .Note__name, .Note__priority, .Note__note {
+    font-weight: bold;
     text-align: center;
     margin: 10px;
     background-color: rgb(172, 185, 110);
