@@ -83,7 +83,6 @@ export default function Register() {
           className="Register__form--input"
           type="link"
           name="password"
-          required={true}
           placeholder="Photo"
           value={registerInfo.photo}
           onChange={(event) => {
@@ -101,7 +100,11 @@ export default function Register() {
         {userImage === "" || userImage === undefined ? (
           <span></span>
         ) : (
-          <img className="Register__image--img" src={userImage} alt="User profile" />
+          <img
+            className="Register__image--img"
+            src={userImage}
+            alt="User profile"
+          />
         )}
       </div>
     </div>
