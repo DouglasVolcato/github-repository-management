@@ -133,4 +133,47 @@ export const repositoryManagementApi = {
     const data = await response.json();
     return data;
   },
+
+  createSecurityKeys: async (body) => {
+    const response = await fetch(baseUrl + "/security/create-security-keys", {
+      method: "POST",
+      headers: new Headers({
+        Authorization: "Bearer " + localStorage.getItem("userToken"),
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      }),
+      body: JSON.stringify({ ...body }),
+    });
+    const data = await response.json();
+    return data;
+  },
+
+  getSecurityKeys: async (userEmail) => {
+    const response = await fetch(
+      baseUrl + "/security/get-security-key-references",
+      {
+        method: "POST",
+        headers: new Headers({
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        }),
+        body: JSON.stringify({ email: userEmail }),
+      }
+    );
+    const data = await response.json();
+    return data;
+  },
+
+  recoverPassword: async (body) => {
+    const response = await fetch(baseUrl + "/security/recover-password", {
+      method: "POST",
+      headers: new Headers({
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      }),
+      body: JSON.stringify({ ...body }),
+    });
+    const data = await response.json();
+    return data;
+  },
 };
