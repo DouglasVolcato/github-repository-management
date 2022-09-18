@@ -12,7 +12,6 @@ export default function PasswordRecovery(props) {
   async function getKeyReferences(event) {
     event.preventDefault();
     const data = await repositoryManagementApi.getSecurityKeys(userEmail);
-    console.log(data)
     setKeyReferences([...data]);
   }
 
