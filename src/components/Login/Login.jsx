@@ -2,6 +2,7 @@ import { useState } from "react";
 import { repositoryManagementApi } from "../Api/repositoryManagementApi";
 import LoggedUser from "../LoggedUser/LoggedUser";
 import UserProfile from "../UserProfile/UserProfile";
+import PasswordRecovery from "../PasswordRecovery/PasswordRecovery";
 import "./Login.css";
 
 export default function Login(props) {
@@ -66,12 +67,10 @@ export default function Login(props) {
         <button className="Login__form--button" type="submit">
           SUBMIT
         </button>
-        <LoggedUser
-          loginInfo={loginInfo}
-          setFullUserProfile={setFullUserProfile}
-          setShowUserModal={setShowUserModal}
-        />
       </form>
+
+      <PasswordRecovery />
+
       {showUserModal === false ? (
         <span></span>
       ) : (
@@ -81,6 +80,11 @@ export default function Login(props) {
           setFullUserProfile={setFullUserProfile}
         />
       )}
+      <LoggedUser
+        loginInfo={loginInfo}
+        setFullUserProfile={setFullUserProfile}
+        setShowUserModal={setShowUserModal}
+      />
     </div>
   );
 }
