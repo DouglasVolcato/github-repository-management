@@ -29,7 +29,7 @@ export default function ExtraSecurity(props) {
 
   return (
     <div className="ExtraSecurity">
-      {props.keyReferences.length > 1 ? (
+      {props.hasKeys === 2 ? (
         <button
           className="ExtraSecurity__openButton"
           id="ExtraSecurityEnabled"
@@ -37,7 +37,7 @@ export default function ExtraSecurity(props) {
         >
           Extra security enabled!
         </button>
-      ) : (
+      ) : props.hasKeys === 1 ? (
         <button
           className="ExtraSecurity__openButton"
           type="button"
@@ -45,6 +45,8 @@ export default function ExtraSecurity(props) {
         >
           Enable extra security
         </button>
+      ) : (
+        <span></span>
       )}
 
       {showFormModal === false ? (

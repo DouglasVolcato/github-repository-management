@@ -6,7 +6,7 @@ import "./LoggedUser.css";
 export default function LoggedUser(props) {
   const [user, setUser] = useState({});
   const [keyReferences, setkeyReferences] = useState([]);
-
+  const [hasKeys, setHasKeys] = useState(0);
   const loginInfo = props.loginInfo;
 
   async function getLoggedUser() {
@@ -19,6 +19,11 @@ export default function LoggedUser(props) {
   async function getUserKeyReferences(UserEmail) {
     const data = await repositoryManagementApi.getSecurityKeys(UserEmail);
     setkeyReferences([...data]);
+    if(data.length === 0){
+      setHasKeys(1)
+    } else if(data.length > 0){
+      setHasKeys(2)
+    }
   }
 
   useEffect(() => {
@@ -37,7 +42,7 @@ export default function LoggedUser(props) {
             ✓ Logged as {user.name}
           </button>
 
-          <ExtraSecurity user={user} keyReferences={keyReferences} />
+          <ExtraSecurity user={user} keyReferences={keyReferences} hasKeys={hasKeys}/>
         </div>
       ) : (
         <div>
