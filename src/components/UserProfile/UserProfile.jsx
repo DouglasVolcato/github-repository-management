@@ -30,7 +30,11 @@ export default function UserProfile(props) {
       props.setFullUserProfile(Object.assign(props.user, updates));
       setEditionPage(false);
     } else {
-      alert("There was an error updating the profile.");
+      if (response.message.includes("at least, 6 characters")) {
+        alert("The password must have, at least, 6 characters.");
+      } else {
+        alert("There was an error updating the profile.");
+      }
     }
   }
 

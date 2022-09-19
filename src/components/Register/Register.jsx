@@ -29,6 +29,8 @@ export default function Register() {
     try {
       if (apiAnswer.message.includes("Email already exists in database")) {
         alert("Email already registrated.");
+      } else if (apiAnswer.message.includes("at least, 6 characters")) {
+        alert("The password must have, at least, 6 characters.");
       }
     } catch (err) {
       handleChange();
