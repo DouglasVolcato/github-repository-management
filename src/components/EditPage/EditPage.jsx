@@ -44,6 +44,15 @@ export default function EditPage(props) {
           <option value="Low">Low</option>
         </select>
         <br />
+        Deadline:
+        <input
+          className="EditPage__form--input"
+          type="date"
+          onChange={(event) =>
+            setNewNote({ ...newNote, deadline: event.target.value })
+          }
+        />
+        <br />
         Note:
         <textarea
           className="EditPage__form--input"

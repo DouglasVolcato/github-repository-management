@@ -7,6 +7,7 @@ export default function Repository(props) {
       name: props.repo.name,
       link: props.repo.svn_url,
       priority: "Low",
+      deadline: new Date().toISOString().slice(0, 10),
       note: "Empty",
     });
   }

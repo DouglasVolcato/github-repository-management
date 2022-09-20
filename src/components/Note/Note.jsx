@@ -34,6 +34,7 @@ export default function Note(props) {
     <div className={borderColor()}>
       <p className="Note__name"> Name: {props.data.name}</p>
       <p className="Note__priority">Priority: {props.data.priority}</p>
+      <p className="Note__priority">Deadline: {props.data.deadline}</p>
       <p className="Note__note">Note: {props.data.note}</p>
 
       <div className="Note__buttons">
