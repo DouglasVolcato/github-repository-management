@@ -8,28 +8,37 @@ export default function Notes() {
   const [notes, setNotes] = useState([]);
 
   async function getNotes() {
-    const data = await repositoryManagementApi
-      .getAllRepo()
-      .then((notes) =>
-        notes.sort((a, b) => {
-          return a.priority === "High" && b.priority !== "High"
-            ? -1
-            : a.priority === "Medium" &&
-              b.priority !== "Medium" &&
-              b.priority !== "High"
-            ? -1
-            : 1;
-        })
-      )
-      .then((notes) =>
-        notes.sort((a, b) => {
+    const data = await repositoryManagementApi.getAllRepo().then((notes) => {
+      const priorityHigh = notes
+        .filter((i) => i.priority === "High")
+        .sort((a, b) => {
           return a.deadline > b.deadline
-            ? -1
+            ? 1
             : a.deadline === b.deadline
             ? 0
-            : 1;
-        })
-      );
+            : -1;
+        });
+      const priorityMedium = notes
+        .filter((i) => i.priority === "Medium")
+        .sort((a, b) => {
+          return a.deadline > b.deadline
+            ? 1
+            : a.deadline === b.deadline
+            ? 0
+            : -1;
+        });
+      const priorityLow = notes
+        .filter((i) => i.priority === "Low")
+        .sort((a, b) => {
+          return a.deadline > b.deadline
+            ? 1
+            : a.deadline === b.deadline
+            ? 0
+            : -1;
+        });
+
+      return priorityHigh.concat(priorityMedium).concat(priorityLow);
+    });
 
     setNotes([...data]);
   }
