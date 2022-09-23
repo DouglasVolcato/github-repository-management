@@ -1,7 +1,7 @@
 # Why does this project exists?
 This project was developed for Module 4 of the Blue EdTech Full Stack Development course and also for helping programmers to manage their repositories on Github.
 
-# How to initalize this project?
+# How to initialize this project?
 - ### Step 1: Install  the dependencies
 ### `npm install`
 
