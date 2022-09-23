@@ -1,4 +1,4 @@
-const baseUrl = "https://repository-management.up.railway.app";
+const baseUrl = "https://repository-management.herokuapp.com";
 
 export const repositoryManagementApi = {
   getAllRepo: async () => {
